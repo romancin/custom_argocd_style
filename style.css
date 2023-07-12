@@ -3,10 +3,10 @@ body{
 }
 /* used to set a different logo */
 .nav-bar__logo img {
-    content: url(https://assets.turbologo.com/blog/en/2018/03/19085254/prozrachniy-logo-1-800x575.png);
+    content: url(https://raw.githubusercontent.com/romancin/custom_argocd_style/main/logo-seedtag-white.svg);
 }
 .top-bar{
-    background: #232222;
+    background: #171C2B;
 }
 .top-bar__breadcrumbs{
     color: white;
@@ -16,43 +16,18 @@ body{
     color: white;
 }
 .filter{
-    background-color: #232222;
+    background-color: #171C2B;
     color: white;
 }
 .filter__item{
-    background-color: #232222;
+    background-color: #171C2B;
     color: white;
 }
 .applications-list__entry{
-    background: #232222;
+    background: #171C2B;
     color: white;
 }
 
 .nav-bar__logo img {
-    content: url(https://assets.turbologo.com/blog/en/2018/03/19085254/prozrachniy-logo-1-800x575.png);
-}
-
-
-.page-header { background-color: #171C2B; }
-.console-output { color: white !important}
-.logo img { content:url("https://ci.seedt.ag/userContent/logo-seedtag-white.svg") } 
-#jenkins-name-icon { display: none; }
-#jenkins-head-icon { height: 17px; }
-body { 
-    --material-primary: #171C2B;  
-    --material-secondary: #3E475E;
-    --header-bg-classic: var(--material-primary);
-    --header-link-bg-classic-hover: var(--material-secondary);
-    --header-link-bg-classic-active: var(--material-secondary);
-    --link-color: var(--material-primary);
-    --link-color--hover: var(--material-secondary);
-    --link-color--active: var(--material-secondary);
-    --pane-link-color: var(--material-primary);
-    --pane-link-color--visited: var(--material-primary);
-    --btn-primary-bg: var(--material-primary);
-    --btn-primary-bg-hover: var(--material-secondary);
-    --btn-primary-bg-active: var(--primary-active);
-    --btn-secondary-color: var(--material-primary);
-    --btn-secondary-bg: var(--btn-text-color);
-    --btn-secondary-border: var(--material-primary);
+    content: url(https://raw.githubusercontent.com/romancin/custom_argocd_style/main/logo-seedtag-white.svg);
 }
