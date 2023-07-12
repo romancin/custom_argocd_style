@@ -40,3 +40,7 @@ body{
     background-image: url(https://raw.githubusercontent.com/romancin/custom_argocd_style/main/logo-seedtag-white.svg);
     height: 50px;
 }
+
+.sidebar__logo img {
+    content: url(https://raw.githubusercontent.com/romancin/custom_argocd_style/main/logo-seedtag-white.svg);
+}
