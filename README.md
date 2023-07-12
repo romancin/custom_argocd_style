@@ -1,0 +1,1 @@
+# custom_argocd_style
