@@ -3,8 +3,8 @@
 :root {
   --sidebar-background: #171c2b;
   --page-and-panel-background: #171c2b;
-  --button-primary: #7d7370;
-  --button-secondary: #7d7370;
+  --button-primary: #171c2b;
+  --button-secondary: #171c2b;
   --button-disabled: #968f8c;
   --primary: #01894d;
 }
