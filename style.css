@@ -1,46 +1,70 @@
-body{
-    background: black;
-}
-/* used to set a different logo */
-.nav-bar__logo img {
-    content: url(https://raw.githubusercontent.com/romancin/custom_argocd_style/main/logo-seedtag-white.svg);
-}
-.top-bar{
-    background: #171C2B;
-}
-.top-bar__breadcrumbs{
-    color: white;
-}
-.filters-group__panel{
-    background-color: black;
-    color: white;
-}
-.filter{
-    background-color: #171C2B;
-    color: white;
-}
-.filter__item{
-    background-color: #171C2B;
-    color: white;
-}
-.applications-list__entry{
-    background: #171C2B;
-    color: white;
+/* Asphalt Theme by Akuity */
+
+:root {
+  --sidebar-background: #171C2B;
+  --page-and-panel-background: #f0ece8;
+  --button-primary: #7d7370;
+  --button-secondary: #7d7370;
+  --button-disabled: #968f8c;
+  --primary: #01894d;
 }
 
-.nav-bar__logo img {
-    content: url(https://raw.githubusercontent.com/romancin/custom_argocd_style/main/logo-seedtag-white.svg);
+.sidebar,
+.nav-bar {
+  background: var(--sidebar-background);
 }
 
-.login__logo img.logo-image {
-  display: none
-}
-.login__logo {
-    background-size: 100px 50px;
-    background-image: url(https://raw.githubusercontent.com/romancin/custom_argocd_style/main/logo-seedtag-white.svg);
-    height: 50px;
+.page__content-wrapper {
+  background: var(--page-and-panel-background) !important;
 }
 
+.sliding-panel__header,
+.sliding-panel__body {
+  background: var(--page-and-panel-background) !important;
+}
+
+/* primary */
+.argo-button--base,
+.argo-button--base:hover {
+  background: var(--button-primary) !important;
+}
+
+.argo-button--base:hover {
+  background: var(--button-primary) !important;
+  opacity: 0.8 !important;
+}
+
+/* secondary */
+.argo-button--base-o {
+  color: var(--button-primary) !important;
+  box-shadow: inset 0 0 0 1px var(--button-primary) !important;
+}
+
+.argo-button--base-o:hover,
+.argo-button--base-o:focus {
+  background: var(--button-secondary) !important;
+  color: #fff !important;
+  box-shadow: inset 0 0 0 1px var(--button-secondary) !important;
+}
+
+/* disabled */
+.argo-button.disabled,
+.argo-button[disabled] {
+  background: var(--button-disabled) !important;
+}
+
+a,
+/* title of the each item in list in settings page */
+.settings-overview__redirect-panel__title,
+.selected,
+.top-bar__title {
+  color: var(--primary) !important;
+}
+
+.tabs__indicator {
+  background: var(--primary) !important;
+}
+.nav-bar__logo img,
 .sidebar__logo img {
-    content: url(https://raw.githubusercontent.com/romancin/custom_argocd_style/main/logo-seedtag-white.svg);
+  content: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzM5IiBoZWlnaHQ9IjM3IiB2aWV3Qm94PSIwIDAgMzM5IDM3IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8ZyBjbGlwLXBhdGg9InVybCgjY2xpcDApIj4KPHBhdGggZD0iTTYwLjA4MTcgMjAuODEyNEg4MC40MTdWMTUuNzI0OUg2MC4wODE3VjUuNTQ5OUg4My4xOVYwLjQ2MjQwMkg1NC41MzU2VjM2LjUzNzRIODMuNjUyMlYzMS42ODEySDYwLjA4MTdWMjAuODEyNFoiIGZpbGw9IiNGMEVGRUYiLz4KPHBhdGggZD0iTTExMC4yMjcgMjAuODEyNEgxMzAuMzMxVjE1LjcyNDlIMTEwLjIyN1Y1LjU0OTlIMTMzLjMzNlYwLjQ2MjQwMkgxMDQuNjgxVjM2LjUzNzRIMTMzLjc5OFYzMS42ODEySDExMC4yMjdWMjAuODEyNFoiIGZpbGw9IiNGMEVGRUYiLz4KPHBhdGggZD0iTTE3MS4yMzMgMC40NjI0MDJIMTU0LjgyNlYzNi41Mzc0SDE3MS4yMzNDMTc2Ljc3OSAzNi41Mzc0IDE4MS4xNyAzNC45MTg3IDE4NC4xNzQgMzEuNjgxMkMxODcuNDA5IDI4LjQ0MzcgMTg4Ljc5NSAyNC4wNDk5IDE4OC43OTUgMTguNDk5OUMxODguNzk1IDEyLjk0OTkgMTg3LjE3OCA4LjU1NjE1IDE4NC4xNzQgNS4zMTg2NUMxODEuMTcgMi4wODExNSAxNzYuNzc5IDAuNDYyNDAyIDE3MS4yMzMgMC40NjI0MDJaTTE4MC4yNDUgMjcuNzQ5OUMxNzguMTY2IDMwLjA2MjQgMTc1LjE2MiAzMS4yMTg3IDE3MS4yMzMgMzEuMjE4N0gxNjAuNjAzVjUuNTQ5OUgxNzEuMDAyQzE3NC45MyA1LjU0OTkgMTc3LjkzNSA2LjcwNjE1IDE4MC4wMTQgOS4wMTg2NUMxODIuMDk0IDExLjMzMTIgMTgzLjAxOCAxNC4zMzc0IDE4My4wMTggMTguMjY4N0MxODMuMjQ5IDIyLjE5OTkgMTgyLjA5NCAyNS40Mzc0IDE4MC4yNDUgMjcuNzQ5OVoiIGZpbGw9IiNGMEVGRUYiLz4KPHBhdGggZD0iTTIwNC4yNzggNS41NDk5SDIxOC4zNzRWMzYuNTM3NEgyMjMuOTJWNS41NDk5SDIzOC4yNDhWMC40NjI0MDJIMjA0LjI3OFY1LjU0OTlaIiBmaWxsPSIjRjBFRkVGIi8+CjxwYXRoIGQ9Ik0yNjMuODk4IDAuNDYyNDAyTDI0OC40MTUgMzYuNTM3NEgyNTQuNjU0TDI1OC41ODMgMjcuMjg3NEgyNzYuMzc2TDI4MC4zMDUgMzYuNTM3NEgyODYuMzEzTDI3MC44MyAwLjQ2MjQwMkgyNjMuODk4Wk0yNjAuNDMxIDIyLjQzMTJMMjY3LjEzMyA2LjcwNjE1SDI2Ny41OTVMMjc0LjI5NiAyMi40MzEySDI2MC40MzFaIiBmaWxsPSIjRjBFRkVGIi8+CjxwYXRoIGQ9Ik0zMjAuNzQ1IDE3LjM0MzhWMjEuOTY4OEgzMzMuNDU0QzMzMy4yMjMgMjcuMjg3NiAzMjcuOTA4IDMyLjE0MzggMzIwLjk3NiAzMi4xNDM4QzMxNi41ODUgMzIuMTQzOCAzMTMuMTE5IDMwLjk4NzYgMzEwLjU3NyAyOC42NzUxQzMwOC4yNjYgMjYuMzYyNiAzMDcuMTExIDIzLjEyNTEgMzA3LjExMSAxOS40MjUxQzMwNy4xMTEgMTUuMjYyNiAzMDguMjY2IDEyLjAyNTEgMzEwLjgwOCA5LjQ4MTMyQzMxMy4zNSA2LjkzNzU3IDMxNy4wNDcgNS41NTAwNyAzMjEuNDM4IDUuNTUwMDdDMzI0LjIxMSA1LjU1MDA3IDMyNi43NTMgNi4wMTI1NyAzMjguNjAxIDcuMTY4ODJDMzMwLjIxOSA4LjA5MzgyIDMzMS42MDYgOS40ODEzMiAzMzIuMjk5IDEwLjg2ODhIMzM4LjUzOEMzMzcuODQ1IDcuODYyNTcgMzM1Ljk5NiA1LjMxODgyIDMzMy4yMjMgMy40Njg4MkMzMzAuMjE5IDEuMzg3NTcgMzI2LjI5MSAwLjIzMTMyMyAzMjEuNjY5IDAuMjMxMzIzQzMxNS40MyAwLjIzMTMyMyAzMTAuNTc3IDIuMDgxMzIgMzA2Ljg4IDUuNTUwMDdDMzAzLjE4MiA5LjI1MDA3IDMwMS4zMzMgMTMuNjQzOCAzMDEuMzMzIDE5LjE5MzhDMzAxLjMzMyAyNC41MTI2IDMwMi45NTEgMjguOTA2MyAzMDYuNDE3IDMyLjE0MzhDMzA5Ljg4NCAzNS4zODEzIDMxNC41MDUgMzcuMDAwMSAzMjAuNTEzIDM3LjAwMDFDMzMyLjI5OSAzNy4wMDAxIDMzOSAyOS4zNjg4IDMzOSAyMS43Mzc2VjE3LjM0MzhIMzIwLjc0NVoiIGZpbGw9IiNGMEVGRUYiLz4KPHBhdGggZD0iTTMzLjA0NSAxMC40MDYyQzMyLjU4MjggNC42MjUgMjcuNDk5IDAgMTcuMTAwMiAwQzYuNzAxNDMgMCAxLjM4NjUgNC4zOTM3NSAxLjM4NjUgMTAuNDA2MkMxLjM4NjUgMTYuNDE4NyA2LjkzMjUyIDE5LjE5MzcgMTYuMTc1OSAyMC41ODEyQzI1LjE4ODEgMjEuNzM3NSAyNy43MzAxIDI0LjUxMjUgMjcuNzMwMSAyNi44MjVDMjcuNzMwMSAyOS4zNjg4IDI1Ljg4MTQgMzIuMTQzNyAxNy41NjI0IDMyLjE0MzdDOS4yNDMzNSAzMi4xNDM3IDYuNDcwMzUgMjguOTA2MiA2LjAwODE4IDI1LjlIMEMwLjQ2MjE2OCAzMi42MDYzIDYuMjM5MjYgMzcgMTcuMzMxMyAzN0MyNy45NjExIDM3IDMzLjUwNzIgMzIuODM3NSAzMy41MDcyIDI2LjgyNUMzMy41MDcyIDIwLjM1IDI3LjczMDEgMTcuMTEyNSAxOS44NzMyIDE1Ljk1NjNDMTIuNzA5NiAxNC44IDcuMTYzNiAxMy44NzUgNy4xNjM2IDkuOTQzNzVDNy4xNjM2IDguMzI1IDguNTUwMSA0Ljg1NjI1IDE3LjEwMDIgNC44NTYyNUMyNS4xODgxIDQuODU2MjUgMjYuODA1NyA4LjMyNSAyNy4wMzY4IDEwLjQwNjJIMzMuMDQ1WiIgZmlsbD0iI0YwRUZFRiIvPgo8L2c+CjxkZWZzPgo8Y2xpcFBhdGggaWQ9ImNsaXAwIj4KPHJlY3Qgd2lkdGg9IjMzOSIgaGVpZ2h0PSIzNyIgZmlsbD0id2hpdGUiLz4KPC9jbGlwUGF0aD4KPC9kZWZzPgo8L3N2Zz4K);
 }
