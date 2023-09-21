@@ -1,9 +1,8 @@
 .sidebar {
-      background: linear-gradient(to bottom, #414868, #232336);
-      color: #c0caf5;
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    }
-    img.sidebar__logo__character {
-       width: 60px !important;
-       content: url("https://raw.githubusercontent.com/romancin/custom_argocd_style/main/seedtag-w.png") !important;
-    }
+  background: #171c2b;
+  color: #3e475e;
+}
+img.sidebar__logo__character {
+   width: 60px !important;
+   content: url("https://press.seedtag.com/hs-fs/hubfs/Seedtag_Wordmark_Positive_RGB.png") !important;
+}
